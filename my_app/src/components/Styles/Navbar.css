@@ -1,0 +1,8 @@
+.nav-container{
+    border: 2px solid black;
+    height: 10vh;
+    background-color: rgb(158, 243, 243);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+}
