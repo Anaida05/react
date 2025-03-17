@@ -1,0 +1,11 @@
+*{
+    text-align: center;
+}
+
+.memoParent p{
+    margin: 10px;
+    font-size: 22px;
+}
+.memoParent button{
+    margin: 10px;
+}

@@ -1,8 +1,10 @@
 .nav-container{
-    border: 2px solid black;
+    /* border: 2px solid black; */
     height: 10vh;
     background-color: rgb(158, 243, 243);
     cursor: pointer;
     display: flex;
+    align-items: center;
     justify-content: space-around;
+    box-sizing: border-box;
 }
