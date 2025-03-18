@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="nav-container">
-      <NavLink to="/home">Home</NavLink>
+      <NavLink to="/">Home</NavLink>
       <NavLink
         to="/about"
         className={({ isActive }) => (isActive ? "active-link" : "")}

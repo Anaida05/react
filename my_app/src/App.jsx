@@ -14,6 +14,7 @@ import MemoFn from "./components/Memo/MemoFn";
 import Callback from "./components/callback/Callback";
 import Countdown from "./components/Countdown"
 import Parent from "./components/props/Parent";
+import Register from "./components/context/Register";
 const App = ()=>{
 return(
   <>
@@ -33,7 +34,8 @@ return(
   <Route path="/stop" element={<Stopwatch/>} />
   <Route path="/countDown" element={<Countdown/>} />
   <Route path="/useCallback" element={<Callback/>}/>
-  <Route path="prop-drilling" element={<Parent/>}/>
+  <Route path="/prop-drilling" element={<Parent/>}/>
+  <Route path="/register" element={<Register/>}/>
   </Routes>
   </>
 )
