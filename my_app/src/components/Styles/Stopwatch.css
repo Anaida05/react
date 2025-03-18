@@ -1,0 +1,12 @@
+.stop-Watch-Container button {
+  /* border: none; */
+  margin: 7px;
+  width: 48px;
+  padding: 5px;
+}
+
+.stop-Watch-Container p{
+    margin: 5px;
+    font-size: 22px;
+    font-weight: 600;
+}

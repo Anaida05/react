@@ -21,7 +21,7 @@ const Countdown = () => {
 
   return (
     <div className={`countdown-container`}>
-      <p className={`time-display ${(time >0 && time<=10) ? "blinking": ""}`}>Countdown : {time}</p>
+      <p className="time-display">Countdown : {time}</p>
       <div className="button-container">
         <p className="start button" onClick={() => setIsRunning(true)}>
           ▶
