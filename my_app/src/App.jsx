@@ -15,6 +15,10 @@ import Callback from "./components/callback/Callback";
 import Countdown from "./components/Countdown"
 import Parent from "./components/props/Parent";
 import Register from "./components/context/Register";
+import NoDependency from "./components/useEffect/NoDependency";
+import SingleDependency from "./components/useEffect/SingleDependency";
+import EmptyDependency from "./components/useEffect/EmptyDependency";
+import MultipleDependency from "./components/useEffect/MultipleDependency";
 const App = ()=>{
 return(
   <>
@@ -36,6 +40,10 @@ return(
   <Route path="/useCallback" element={<Callback/>}/>
   <Route path="/prop-drilling" element={<Parent/>}/>
   <Route path="/register" element={<Register/>}/>
+  <Route path="/useEffect1" element={<NoDependency/>}/>
+  <Route path="/useEffect2" element={<EmptyDependency/>}/>
+  <Route path="/useEffect3" element={<SingleDependency/>}/>
+  <Route path="/useEffect4" element={<MultipleDependency/>}/>
   </Routes>
   </>
 )
