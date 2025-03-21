@@ -1,6 +1,7 @@
 import React from 'react'
-import "./Styles/Post.css"
 import { Link, Outlet } from 'react-router-dom'
+import "../Styles/Post.css"
+
 // routing example
 const Home = () => {
    
@@ -8,8 +9,8 @@ const Home = () => {
     <div>
         <h1>Home</h1>
         <div className='home-container'>
-            <Link to={"/home/dashboard"}>Dashbord</Link>
-            <Link to={"/home/about#team"}>About</Link>
+            <Link className='container-link' to={"/home/dashboard"}>Dashbord</Link>
+            <Link className='container-link' to={"/home/about#team"}>About</Link>
             <Outlet/> {/* usefull to show the content of the child component */}
         </div>
         <h2>Blog Post</h2>

@@ -1,11 +1,10 @@
-import About from "./components/About";
+import About from "./components/Routing/About";
 import Counter from "./components/Counter";
-import CurrentPage from "./components/Routing/CurrentPage";
-import Dashboard from "./components/Dashboard";
-import Home from "./components/Home";
+import Dashboard from "./components/Routing/Dashboard";
+import Home from "./components/Routing/Home";
 import Navbar from "./components/Navbar";
-import PageNotFound from "./components/PageNotFound";
-import Post from "./components/Post";
+import PageNotFound from "./components/Routing/PageNotFound";
+import Post from "./components/Routing/Post";
 import { Route, Routes } from "react-router-dom";
 import "./components/Styles/App.css";
 import Stopwatch from "./components/Stopwatch";
@@ -27,8 +26,8 @@ const App = () => {
       <Routes>
         <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Home />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="about" element={<About />} />
+          <Route path="/home/dashboard" element={<Dashboard />} />
+          <Route path="/home/about" element={<About />} />
           <Route path="/home/post/:category/:id" element={<Post />} />
         </Route>
         <Route path="/counter" element={<Counter />} />

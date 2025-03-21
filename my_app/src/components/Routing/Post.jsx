@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import "./Styles/Post.css"
+import "../Styles/Post.css"
 const Post = () => {
     const {category,id} = useParams();
   return (
