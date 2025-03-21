@@ -11,7 +11,7 @@ const Counter = () => {
   };
 
   const passStateToUseLocation=()=>{
-    router("/current",{state:{carName : "Vento",color:"white",company:"Volkswagen"}})
+    router("/routing/current",{state:{carName : "Vento",color:"white",company:"Volkswagen"}})
   }
  
   return (

@@ -11,7 +11,7 @@ const UseMemo = () => {
   function heavyCalculation(num) {
     console.log("calculation started");
     let sum = 0;
-    for (let i = 0; i < 1000000000; i++) {
+    for (let i = 0; i < 100000000; i++) {
       sum = sum + i;
     }
     return sum + num;
