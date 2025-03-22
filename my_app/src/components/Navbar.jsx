@@ -13,16 +13,18 @@ const Navbar = () => {
 
   return (
     <nav className="nav-container">
-      <NavLink to="/">Home</NavLink>
+      <NavLink to="/home">Home</NavLink>
       <NavLink
-        to="/about"
-        className={({ isActive }) => (isActive ? "active-link" : "")}
+        to="/home/about"
+        style={({ isActive }) => ({
+          color: isActive ? "red" : "black",
+          fontWeight: isActive ? "bold" : "normal",
+        })}
       >
         About Us
       </NavLink>
-      {/* <p onClick={redirectToCounter}>Counter</p>
-        <Link to="/home" className="logo">My Post</Link> */}
       <p onClick={redirectToCountDown}>CountDown</p>
+      <Link style={{textDecoration:"none", color:"black"}} to={"/stop"}>StopWatch</Link>
     </nav>
   );
 };

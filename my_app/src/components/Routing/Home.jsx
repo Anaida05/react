@@ -10,9 +10,10 @@ const Home = () => {
         <h1>Home</h1>
         <div className='home-container'>
             <Link className='container-link' to={"/home/dashboard"}>Dashbord</Link>
-            <Link className='container-link' to={"/home/about#team"}>About</Link>
+            <Link className='container-link' to={"/home/about"}>About</Link>
             <Outlet/> {/* usefull to show the content of the child component */}
         </div>
+
         <h2>Blog Post</h2>
         <div className="post-links"> 
             <Link to={"/home/post/tech/1"}>Post 1</Link>

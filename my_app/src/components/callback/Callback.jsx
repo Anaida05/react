@@ -5,9 +5,6 @@ const Callback = () => {
   const [counter, setCounter] = useState(1);
   const [todos, setTodos] = useState([]);
 
-//   function addTodo() {
-//     setTodos([...todos, "My new todo!"]);
-//   }
 
 const addTodo = useCallback(()=>(
     setTodos([...todos,"my new todo"])

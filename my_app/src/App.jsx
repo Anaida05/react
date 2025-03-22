@@ -19,16 +19,17 @@ import SingleDependency from "./components/useEffect/SingleDependency";
 import EmptyDependency from "./components/useEffect/EmptyDependency";
 import MultipleDependency from "./components/useEffect/MultipleDependency";
 import SlParent from "./components/props/SlParent";
+import UserefEg from "./components/UserefEg";
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="*" element={<PageNotFound />} />
-        <Route path="/" element={<Home />}>
-          <Route path="/home/dashboard" element={<Dashboard />} />
-          <Route path="/home/about" element={<About />} />
-          <Route path="/home/post/:category/:id" element={<Post />} />
+        <Route path="/home" element={<Home />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="about" element={<About />} />
+          <Route path="post/:category/:id" element={<Post />} />
         </Route>
         <Route path="/counter" element={<Counter />} />
         <Route path="/countdown" element={<Countdown />} />
@@ -44,6 +45,7 @@ const App = () => {
         <Route path="/useEffect3" element={<SingleDependency />} />
         <Route path="/useEffect4" element={<MultipleDependency />} />
         <Route path="/stateLifting" element={<SlParent />} />
+        <Route path="/use-ref" element={<UserefEg/>}/>
       </Routes>
     </>
   );

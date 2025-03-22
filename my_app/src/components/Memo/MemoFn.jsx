@@ -11,6 +11,8 @@ const MemoFn = () => {
         <p>Counter : {counter}</p>
         <button onClick={()=>(setCounter(counter + 1))}>+</button>
         <MemoChildCompo counter2 ={counter2} />
+        <button onClick={() => setCounter2(counter2 + 10)}>Increment Counter2</button>
+
     </div>
   )
 }
