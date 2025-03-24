@@ -20,6 +20,7 @@ import EmptyDependency from "./components/useEffect/EmptyDependency";
 import MultipleDependency from "./components/useEffect/MultipleDependency";
 import SlParent from "./components/props/SlParent";
 import UserefEg from "./components/UserefEg";
+import TodoApp from "./components/Context/TodoApp";
 const App = () => {
   return (
     <>
@@ -46,6 +47,7 @@ const App = () => {
         <Route path="/useEffect4" element={<MultipleDependency />} />
         <Route path="/stateLifting" element={<SlParent />} />
         <Route path="/use-ref" element={<UserefEg/>}/>
+        <Route path="/todoContext" element={<TodoApp/>} />
       </Routes>
     </>
   );
