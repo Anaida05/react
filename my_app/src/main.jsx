@@ -2,12 +2,15 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 import TodoProvider from "./components/Context/TodoContext.jsx";
-import {Toaster} from "react-hot-toast"
+import {Provider} from "react-redux"
+import store from "./components/Store/store.js";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+    <Provider store={store}>
       <TodoProvider>
         <Toaster
           position="top-center"
@@ -37,6 +40,7 @@ createRoot(document.getElementById("root")).render(
         />
         <App />
       </TodoProvider>
+      </Provider>
     </BrowserRouter>
   </StrictMode>
 );

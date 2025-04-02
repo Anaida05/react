@@ -5,7 +5,7 @@ import Home from "./components/Routing/Home";
 import Navbar from "./components/Navbar";
 import PageNotFound from "./components/Routing/PageNotFound";
 import Post from "./components/Routing/Post";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import "./components/Styles/App.css";
 import Stopwatch from "./components/Stopwatch";
 import UseMemo from "./components/UseMemo";
@@ -21,12 +21,15 @@ import MultipleDependency from "./components/useEffect/MultipleDependency";
 import SlParent from "./components/props/SlParent";
 import UserefEg from "./components/UserefEg";
 import TodoApp from "./components/Context/TodoApp";
+import CounterRtk from "./components/CounterRtk";
+import TodoRtk from "./components/TodoRtk";
 const App = () => {
   return (
     <>
       <Navbar />
       <Routes>
         <Route path="*" element={<PageNotFound />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/home" element={<Home />}>
           <Route path="dashboard" element={<Dashboard />} />
           <Route path="about" element={<About />} />
@@ -46,8 +49,10 @@ const App = () => {
         <Route path="/useEffect3" element={<SingleDependency />} />
         <Route path="/useEffect4" element={<MultipleDependency />} />
         <Route path="/stateLifting" element={<SlParent />} />
-        <Route path="/use-ref" element={<UserefEg/>}/>
-        <Route path="/todoContext" element={<TodoApp/>} />
+        <Route path="/use-ref" element={<UserefEg />} />
+        <Route path="/todoApp" element={<TodoApp />} />
+        <Route path="/rtk" element={<CounterRtk />} />
+        <Route path="/rtk-Todo" element={<TodoRtk />} />
       </Routes>
     </>
   );
