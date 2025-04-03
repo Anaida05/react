@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTodos, fetchTodos } from "./Store/slices/TodoSlice";
+import { addTodos, deleteTodos, fetchTodos } from "./Store/slices/TodoSlice";
 
 const TodoRtk = () => {
   const dispatch = useDispatch();
   const { todos, loading, error } = useSelector((state) => state.todos);
   const [newTodo, setNewTodo] = useState("");
+  const [editText,setEditText] = useState("")
+  const [editId,setEditId] = useState(null)
 
   useEffect(() => {
     dispatch(fetchTodos());
@@ -22,10 +24,19 @@ const TodoRtk = () => {
       setNewTodo("");
     }
   };
+
+  const removeTodo = (id) => {
+    dispatch(deleteTodos(id));
+  };
+
+  const editTodo = (id) =>{
+    dispatch(editTodo)
+  }
+
   return (
     <>
       <h2>Todo</h2>
-      {loading && <p>loading...</p>}
+      {loading && todos.length === 0 && <div className="spinner"></div>}
       {error && <p>error : {error}</p>}
       <div>
         <input
@@ -33,12 +44,16 @@ const TodoRtk = () => {
           onChange={(e) => setNewTodo(e.target.value)}
           value={newTodo}
           placeholder="Enter Todo"
+          style={{margin:"10px"}}
         />
         <button onClick={addNewTodo}>Add Todo</button>
       </div>
       <ul>
         {todos.map((todo, id) => (
-          <li key={id}>{todo.title}</li>
+          <li key={id} style={{display:"flex",gap:"10px",alignItems:"center",marginLeft:"33rem"}}>
+            <span>{todo.title}</span>
+            <button onClick={() => removeTodo(todo.id)}>Delete</button>
+          </li>
         ))}
       </ul>
     </>
