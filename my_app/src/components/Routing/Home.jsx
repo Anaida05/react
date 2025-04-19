@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import "../Styles/Post.css"
 
 // routing example
 const Home = () => {
-   
+   useEffect(()=>{console.log("Anaidda")})
   return (
     <div>
         <h1>Home</h1>

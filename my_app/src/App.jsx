@@ -22,7 +22,6 @@ import SlParent from "./components/props/SlParent";
 import UserefEg from "./components/UserefEg";
 import TodoApp from "./components/Context/TodoApp";
 import CounterRtk from "./components/CounterRtk";
-import TodoRtk from "./components/TodoRtk";
 const App = () => {
   return (
     <>
@@ -52,7 +51,6 @@ const App = () => {
         <Route path="/use-ref" element={<UserefEg />} />
         <Route path="/todoApp" element={<TodoApp />} />
         <Route path="/rtk" element={<CounterRtk />} />
-        <Route path="/rtk-Todo" element={<TodoRtk />} />
       </Routes>
     </>
   );
