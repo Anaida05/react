@@ -22,6 +22,11 @@ import SlParent from "./components/props/SlParent";
 import UserefEg from "./components/UserefEg";
 import TodoApp from "./components/Context/TodoApp";
 import CounterRtk from "./components/CounterRtk";
+import StateLift from "./components/statemanagement/StateLift";
+import { lazy, Suspense } from "react";
+const ImageGallery = lazy(() =>
+  import("./components/LazyLoading/ImageGallery")
+);
 const App = () => {
   return (
     <>
@@ -51,6 +56,15 @@ const App = () => {
         <Route path="/use-ref" element={<UserefEg />} />
         <Route path="/todoApp" element={<TodoApp />} />
         <Route path="/rtk" element={<CounterRtk />} />
+        <Route path="/lift" element={<StateLift />} />
+        <Route
+          path="/lazy"
+          element={
+            <Suspense fallback={<p>Loading.....</p>}>
+              <ImageGallery />
+            </Suspense>
+          }
+        />
       </Routes>
     </>
   );

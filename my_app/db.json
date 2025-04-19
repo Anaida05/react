@@ -1,0 +1,24 @@
+{
+    "images": [
+      { "id": 1, "title": "Mountain", "url": "https://picsum.photos/id/1011/300/200" },
+      { "id": 2, "title": "Beach", "url": "https://picsum.photos/id/1015/300/200" },
+      { "id": 3, "title": "Forest", "url": "https://picsum.photos/id/1018/300/200" },
+      { "id": 4, "title": "River", "url": "https://picsum.photos/id/1025/300/200" },
+      { "id": 5, "title": "Desert", "url": "https://picsum.photos/id/1035/300/200" },
+      { "id": 6, "title": "Bridge", "url": "https://picsum.photos/id/1042/300/200" },
+      { "id": 7, "title": "Train", "url": "https://picsum.photos/id/1067/300/200" },
+      { "id": 8, "title": "Ocean", "url": "https://picsum.photos/id/1074/300/200" },
+      { "id": 9, "title": "Valley", "url": "https://picsum.photos/id/1084/300/200" },
+      { "id": 10, "title": "Sunset", "url": "https://picsum.photos/id/1080/300/200" },
+      { "id": 11, "title": "City View", "url": "https://picsum.photos/id/1031/300/200" },
+      { "id": 12, "title": "Canyon", "url": "https://picsum.photos/id/1029/300/200" },
+      { "id": 13, "title": "Rafting", "url": "https://picsum.photos/id/1019/300/200" },
+      { "id": 14, "title": "Lake", "url": "https://picsum.photos/id/1016/300/200" },
+      { "id": 15, "title": "Foggy Forest", "url": "https://picsum.photos/id/1021/300/200" },
+      { "id": 16, "title": "Meadow", "url": "https://picsum.photos/id/1020/300/200" },
+      { "id": 17, "title": "Snowy Hill", "url": "https://picsum.photos/id/1003/300/200" },
+      { "id": 19, "title": "Adventure", "url": "https://picsum.photos/id/1005/300/200" },
+      { "id": 20, "title": "Camping", "url": "https://picsum.photos/id/1006/300/200" }
+    ]
+  }
+  
