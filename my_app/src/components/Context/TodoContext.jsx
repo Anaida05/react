@@ -29,7 +29,7 @@ const TodoProvider = ({ children }) => {
         const response = await axios.get(
           "https://jsonplaceholder.typicode.com/todos?_limit=5"
         );
-        dispatch({ type: "FetchTodos", payload: response });
+        dispatch({ type: "FetchTodos", payload: response.data});
       } catch (error) {
         console.log(error);
       }

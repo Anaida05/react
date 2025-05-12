@@ -19,15 +19,16 @@ const TodoApp = () => {
         name=""
         id=""
       />
-
+      <button onClick={()=>dispatch({type:"AddTodo",payload:todo})}>Add</button>
       <ul>
-        {state.map((todo, id) => (
-          <li key={id}>
-            <p>{todo}</p>
-            <button onClick={add}>Add Todo</button>
-            <button>Delete</button>
-          </li>
-        ))}
+      {state.map((todo, id) => (
+    <li key={todo.id || id}>
+      <p>{todo.title || todo.text}</p>
+      <button onClick={() => dispatch({ type: "RemoveTodo", payload: todo.id })}>
+        Delete
+      </button>
+    </li>
+  ))}
       </ul>
     </div>
   );
